@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    console.log("Hello i am from console");
+
+//Create Direct Instance of Object
+
+    Direct = {
+      name: "ram", age: 20, address: "Pokhara",
+      greet() {
+        console.log("Namaste i am", this.name);
+      },
+    };
+
+    console.log("name is " + Direct.name);
+    Direct.greet();
+
+    // Create an Object Constructor
+
+    function grt() {
+      console.log(this.name, "says hello from", this.address);
+    }
+
+    function objCons(n, a, ad) { this.name = n; this.age = a; this.address = ad; this.greets = grt;
+    }
+yam
+    var yam = new objCons("yam", 20, "Ktm");
+    var chit = new objCons("chit", 21, "chitwan");
+
+    console.log(yam.name, yam.address);
+    yam.greets();
+
+    var circle = {
+      radius: 7,
+
+      area() {
+        return Math.PI * this.radius ** 2;
+      },
+    };
+    console.log(circle.area());
+
+
+    function ar() {
+      console.log("The area of circle: ", Math.PI * this.radius ** 2);
+    }
+
+    function cirObj(ra) {
+      this.radius = ra;
+      this.area = ar;
+    }
+
+    newCircle = new cirObj(20);
+    newCircle.area();
+
+  </script>
+</html>
