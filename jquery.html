@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){                 //here this to prevent jquery code running before loading
+            $("#myDiv").hide();
+            $("#myDiv").click(function(){              //when u click mydiv msg, it pops alert signal
+                alert("kina thichis, banda gar");
+            });
+            $("#myDiv").on("mouseover", function(){
+                $("body").css("background-color","green");
+            });
+
+        $("#myDiv").on("mouseleave", function(){
+           $("body").css("background-color","white");
+        });
+            
+        });
+    </script>
+
+
+</head>
+<body>
+   <div id="myDiv">Hello k xa</div>                <!--   id ko satta class use gare,,, tala # ko thau ma . use gardey haii     -->
+    <div onclick="$('#myDiv').show()">Show</div>            
+    <div onclick="hidemyDiv()">Hide</div>
+    <script>
+        function hidemyDiv(){
+            $('#myDiv').hide();
+        }
+    </script>
+<!-- 
+<script>
+    $("#myDiv").hide();          use to hide 
+ </script>
+  -->
+</body>
+</html>
